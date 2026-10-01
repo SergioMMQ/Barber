@@ -823,27 +823,110 @@ footer {
   }
 }
 
+/* ─── WhatsApp CTA ───────────────────────────────────── */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: #25d366;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius);
+  transition: background var(--transition), transform var(--transition);
+  margin-bottom: 40px;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp::before {
+  content: "💬";
+  font-size: 1rem;
+}
+
+.whatsapp-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 24px 8px;
+  text-align: center;
+}
+
+.whatsapp-section p {
+  color: var(--text-muted);
+  font-size: .85rem;
+  margin-bottom: 16px;
+}
+
+.separador-form {
+  max-width: 600px;
+  margin: 0 auto 32px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-muted);
+  font-size: .75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.separador-form::before,
+.separador-form::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ─── Demo badge ─────────────────────────────────────── */
+.demo-note {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: .68rem;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+}
+
+.demo-note a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
 /* ─── Responsive: mobile ≤590px ─────────────────────── */
 @media screen and (max-width: 590px) {
   .hero {
-    max-height: 320px;
+    max-height: 340px;
   }
   .hero-content {
     padding: 24px 20px;
   }
   .hero-title {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
+  /* nav en una sola fila compacta para no tapar el hero */
   .caja {
-    flex-direction: column;
-    height: auto;
-    padding: 16px 20px;
-    gap: 14px;
+    flex-direction: row;
+    height: 58px;
+    padding: 0 16px;
+    gap: 0;
+  }
+  .logo-texto {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
   }
   nav ul {
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 12px;
+  }
+  nav a {
+    font-size: 9px;
+    letter-spacing: 1px;
   }
   .principal {
     padding: 24px 20px;
